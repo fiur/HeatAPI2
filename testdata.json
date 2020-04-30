@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "author": {
+        "name": "Paul O\u0027Shannessy",
+        "githubUsername": "zpao"
+      },
+      "text": "React is awesome!"
+    }
+  ],
+  "hasMore": true
+}
+
+[
+  {
+    "id": 752129,
+    "name": "Tude",
+    "datetime": "2020-02-12T13:06:00",
+    "value": 4.70
+  }
+]
