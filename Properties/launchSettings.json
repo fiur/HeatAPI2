@@ -16,13 +16,6 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "React.Sample.Webpack.CoreMvc": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
       "applicationUrl": "http://localhost:9457/"
     }
   }
