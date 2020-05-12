@@ -39,14 +39,30 @@ namespace HeatAPI.DataContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
+            /*if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer("Server=ACERSERVER\\SQLEXPRESS;Database=Heatmonitor;Trusted_Connection=True;");
             }
+            */
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<Dummy>(entity =>
+            {
+                entity.ToTable("Dummy");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Datetime)
+                    .HasColumnName("datetime")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.Value).HasColumnName("value");
+                entity.Ignore(e => e.Name);
+            });
+
 
             modelBuilder.Entity<Alarmer>(entity =>
             {
