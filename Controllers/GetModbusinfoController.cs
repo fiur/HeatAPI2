@@ -12,9 +12,9 @@ namespace HeatAPI2.Controllers
 {
     [Route("api/Get/modbusinfo/")]
     [Produces("application/json")]
-    public class ModbusInfoController : Controller
+    public class GetModbusInfoController : Controller
     {
-        public ModbusInfoController(VarmedataContext context)
+        public GetModbusInfoController(VarmedataContext context)
         {
             _context = context;
         }
