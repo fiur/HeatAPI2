@@ -25,9 +25,8 @@ namespace HeatAPI.Controllers
         }
         private readonly VarmedataContext _context;
 
-
         // GET: lowest/tude
-        [HttpGet("{m}")]
+        [HttpGet("lowest/{m}")]
         public ActionResult<List<Dummy>> Lowest(string m)
         {
             using (_context)
@@ -38,7 +37,7 @@ namespace HeatAPI.Controllers
         }
 
         // GET: highest/tude
-        [HttpGet("{m}")]
+        [HttpGet("highest/{m}")]
         public ActionResult<List<Dummy>> Highest(string m)
         {
             using (_context)
@@ -47,6 +46,21 @@ namespace HeatAPI.Controllers
                 return Item;
             }
         }
-    }
 
+
+        // GET: /tude
+        [HttpGet("{m}")]
+        public ActionResult<List<Dummy>> All(string m)
+        {
+            {
+                using (_context)
+                {
+                  //  var Item = _context.Dummy.FromSqlRaw("SELECT q.* FROM (Select top 10 * FROM " + m + " order by datetime desc) q ORDER BY q.datetime ASC").ToList<Dummy>();
+                    var Item = _context.Dummy.FromSqlRaw("Select top 10 * FROM " + m + " order by datetime desc").ToList<Dummy>();
+                    return Item;
+                }
+            }
+
+        }
+    }
 }
