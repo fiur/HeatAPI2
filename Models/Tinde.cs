@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Tinde()
         {
             Name = "Tinde";
+            Unit = "°C";
+            Controllable = false;
         }
         public void convert()
         {

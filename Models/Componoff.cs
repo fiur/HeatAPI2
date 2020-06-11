@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Componoff()
         {
             Name = "Componoff";
+            Unit = "";
+            Controllable = false;
         }
     }
 

@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Tfremr()
         {
             Name = "Tfremr";
+            Unit = "°C";
+            Controllable = false;
         }
         public void convert()
         {

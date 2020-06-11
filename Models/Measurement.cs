@@ -10,6 +10,8 @@ namespace HeatAPI.Models
         public String Name { get; set; }
         public DateTime Datetime { get; set; }
         public decimal Value { get; set; }
+        public string Unit { get; set; }
+        public Boolean Controllable { get; set; }
     }
 }
 

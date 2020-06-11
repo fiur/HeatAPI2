@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Tzinde()
         {
             Name = "Tzinde";
+            Unit = "°C";
+            Controllable = true;
         }
         public void convert()
         {

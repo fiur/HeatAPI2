@@ -61,6 +61,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
 
@@ -76,6 +78,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Componoff>(entity =>
@@ -90,6 +94,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Grmin>(entity =>
@@ -104,6 +110,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Pprodvarme>(entity =>
@@ -118,6 +126,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Pprodvv>(entity =>
@@ -132,6 +142,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Ptotude>(entity =>
@@ -146,6 +158,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Pude>(entity =>
@@ -160,6 +174,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Qcirc>(entity =>
@@ -174,6 +190,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tfrainde>(entity =>
@@ -188,6 +206,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tfremberr>(entity =>
@@ -202,6 +222,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tfremr>(entity =>
@@ -216,6 +238,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tinde>(entity =>
@@ -230,6 +254,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Treturr>(entity =>
@@ -244,6 +270,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tstopude>(entity =>
@@ -258,6 +286,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Ttilinde>(entity =>
@@ -272,6 +302,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tude>(entity =>
@@ -286,6 +318,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tvv>(entity =>
@@ -300,6 +334,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Tzinde>(entity =>
@@ -314,6 +350,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
 
             modelBuilder.Entity<Vkurve>(entity =>
@@ -328,6 +366,8 @@ namespace HeatAPI.DataContext
 
                 entity.Property(e => e.Value).HasColumnName("value");
                 entity.Ignore(e => e.Name);
+                entity.Ignore(e => e.Unit);
+                entity.Ignore(e => e.Controllable);
             });
         }
     }

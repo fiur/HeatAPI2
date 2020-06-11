@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Tude()
         {
             Name = "Tude";
+            Unit = "°C";
+            Controllable = false;
         }
         public void convert()
         {

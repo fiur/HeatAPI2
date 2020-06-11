@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Tstopude()
         {
             Name = "Tstopude";
+            Unit = "°C";
+            Controllable = true;
         }
         public void convert()
         {

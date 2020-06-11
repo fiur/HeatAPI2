@@ -9,6 +9,8 @@ namespace HeatAPI.Models
         public Tfrainde()
         {
             Name = "Tfrainde";
+            Unit = "°C";
+            Controllable = false;
         }
         public void convert()
         {

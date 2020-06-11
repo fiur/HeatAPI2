@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Grmin()
         {
             Name = "Grmin";
+            Unit = "";
+            Controllable = false;
         }
         public void convert()
         {

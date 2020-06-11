@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Qcirc()
         {
             Name = "Qcirc";
+            Unit = "l/min";
+            Controllable = false;
         }
         public void convert()
         {

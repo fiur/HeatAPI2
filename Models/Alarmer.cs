@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Alarmer()
         {
             Name = "Alarmer";
+            Unit = "stk";
+            Controllable = false;
         }
     }
 

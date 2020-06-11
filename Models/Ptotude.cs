@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Ptotude()
         {
             Name = "Ptotude";
+            Unit = "kwh";
+            Controllable = false;
         }
         public void convert()
         {

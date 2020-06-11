@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Pprodvv()
         {
             Name = "Pprodvv";
+            Unit = "kwh";
+            Controllable = false;
         }
         public void convert()
         {

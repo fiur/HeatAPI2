@@ -7,7 +7,9 @@ namespace HeatAPI.Models
     {
         public Treturr()
         {
-            Name = "Tretur";
+            Name = "Treturr";
+            Unit = "°C";
+            Controllable = false;
         }
         public void convert()
         {

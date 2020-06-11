@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Tvv()
         {
             Name = "Tvv";
+            Unit = "°C";
+            Controllable = false;
         }
         public void convert()
         {

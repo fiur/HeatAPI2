@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Pude()
         {
             Name = "Pude";
+            Unit = "watt";
+            Controllable = false;
         }
 
         public void convert() {

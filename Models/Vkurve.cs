@@ -8,6 +8,8 @@ namespace HeatAPI.Models
         public Vkurve()
         {
             Name = "Vkurve";
+            Unit = "";
+            Controllable = true;
         }
     }
 
