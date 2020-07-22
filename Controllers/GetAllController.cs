@@ -19,7 +19,7 @@ namespace HeatAPI.Controllers
     [Produces("application/json")]
     public class GetAllController : Controller
     {
-        //Localhost:5555/api/Get/tude/5
+        //Localhost:5555/api/Get/tude/5222
         public GetAllController(VarmedataContext context)
         {
             _context = context;
