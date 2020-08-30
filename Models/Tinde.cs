@@ -10,22 +10,15 @@ namespace HeatAPI.Models
             Name = "Tinde";
             Unit = "°C";
             Controllable = false;
-        }
-        public void convert()
-        {
-            Value = Value / 10;
-        }
-    }
-
-    public class TindeMeasurement : MeasurementRequest
-    { 
-    
-        public TindeMeasurement()
-        {
             modBusAddress = 1;
             modBusSlaveidAddress = 40033;
             modBusCount = 1;
             modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+        }
+        public void convert()
+        {
+            Value = Value / 10;
         }
     }
 }

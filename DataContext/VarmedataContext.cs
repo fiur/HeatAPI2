@@ -63,6 +63,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
 
@@ -80,6 +85,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Componoff>(entity =>
@@ -96,6 +106,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Grmin>(entity =>
@@ -112,6 +127,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Pprodvarme>(entity =>
@@ -128,6 +148,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Pprodvv>(entity =>
@@ -144,6 +169,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Ptotude>(entity =>
@@ -160,6 +190,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Pude>(entity =>
@@ -176,6 +211,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Qcirc>(entity =>
@@ -192,6 +232,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tfrainde>(entity =>
@@ -208,6 +253,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tfremberr>(entity =>
@@ -224,6 +274,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tfremr>(entity =>
@@ -240,6 +295,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tinde>(entity =>
@@ -256,6 +316,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Treturr>(entity =>
@@ -272,6 +337,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tstopude>(entity =>
@@ -288,6 +358,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Ttilinde>(entity =>
@@ -304,6 +379,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tude>(entity =>
@@ -320,6 +400,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tvv>(entity =>
@@ -336,6 +421,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Tzinde>(entity =>
@@ -352,6 +442,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
             modelBuilder.Entity<Vkurve>(entity =>
@@ -368,6 +463,11 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.Name);
                 entity.Ignore(e => e.Unit);
                 entity.Ignore(e => e.Controllable);
+                entity.Ignore(e => e.modBusAddress);
+                entity.Ignore(e => e.modBusCount);
+                entity.Ignore(e => e.modBusEndpoint);
+                entity.Ignore(e => e.modBusSize);
+                entity.Ignore(e => e.modBusSlaveidAddress);
             });
         }
     }

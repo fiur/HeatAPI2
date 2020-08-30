@@ -11,22 +11,15 @@ namespace HeatAPI.Models
             Name = "Tfrainde";
             Unit = "°C";
             Controllable = false;
-        }
-        public void convert()
-        {
-            Value = Value / 10;
-        }
-    }
-
-    public class TfraindeMeasurement : MeasurementRequest
-    {
-
-        public TfraindeMeasurement()
-        {
             modBusAddress = 1;
             modBusSlaveidAddress = 44055;
             modBusCount = 1;
             modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+        }
+        public void convert()
+        {
+            Value = Value / 10;
         }
     }
 }

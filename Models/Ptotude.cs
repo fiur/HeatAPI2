@@ -10,22 +10,15 @@ namespace HeatAPI.Models
             Name = "Ptotude";
             Unit = "kwh";
             Controllable = false;
-        }
-        public void convert()
-        {
-            Value = Value / 10;
-        }
-    }
-
-    public class PtotudeMeasurement : MeasurementRequest
-    {
-
-        public PtotudeMeasurement()
-        {
             modBusAddress = 2;
             modBusSlaveidAddress = 52;
             modBusCount = 1;
             modBusSize = 32;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+        }
+        public void convert()
+        {
+            Value = Value / 10;
         }
     }
 }

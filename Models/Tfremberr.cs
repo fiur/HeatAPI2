@@ -10,22 +10,15 @@ namespace HeatAPI.Models
             Name = "Tfremberr";
             Unit = "°C";
             Controllable = false;
-        }
-        public void convert()
-        {
-            Value = Value / 10;
-        }
-    }
-
-    public class TfremberrMeasurement : MeasurementRequest
-    {
-
-        public TfremberrMeasurement()
-        {
             modBusAddress = 1;
             modBusSlaveidAddress = 43009;
             modBusCount = 1;
             modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+        }
+        public void convert()
+        {
+            Value = Value / 10;
         }
     }
 }

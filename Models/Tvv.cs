@@ -10,6 +10,11 @@ namespace HeatAPI.Models
             Name = "Tvv";
             Unit = "°C";
             Controllable = false;
+            modBusAddress = 1;
+            modBusSlaveidAddress = 40013;
+            modBusCount = 1;
+            modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
         }
         public void convert()
         {
@@ -17,16 +22,5 @@ namespace HeatAPI.Models
         }
     }
 
-    public class TvvMeasurement : MeasurementRequest
-    {
-
-        public TvvMeasurement()
-        {
-            modBusAddress = 1;
-            modBusSlaveidAddress = 40013;
-            modBusCount = 1;
-            modBusSize = 16;
-        }
-    }
 }
 

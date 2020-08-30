@@ -10,18 +10,12 @@ namespace HeatAPI.Models
             Name = "Componoff";
             Unit = "";
             Controllable = false;
-        }
-    }
-
-    public class ComponoffMeasurement : MeasurementRequest
-    {
-
-        public ComponoffMeasurement()
-        {
             modBusAddress = 1;
             modBusSlaveidAddress = 44457;
             modBusCount = 1;
             modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
         }
     }
+
 }

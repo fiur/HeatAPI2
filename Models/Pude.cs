@@ -10,22 +10,15 @@ namespace HeatAPI.Models
             Name = "Pude";
             Unit = "watt";
             Controllable = false;
-        }
-
-        public void convert() {
-            Value =  Value / 10;
-        }
-    }
-
-    public class PudeMeasurement : MeasurementRequest
-    {
-
-        public PudeMeasurement()
-        {
             modBusAddress = 2;
             modBusSlaveidAddress = 56;
             modBusCount = 1;
             modBusSize = 32;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+        }
+
+        public void convert() {
+            Value =  Value / 10;
         }
     }
 }

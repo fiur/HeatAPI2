@@ -10,22 +10,15 @@ namespace HeatAPI.Models
             Name = "Tstopude";
             Unit = "°C";
             Controllable = true;
-        }
-        public void convert()
-        {
-            Value = Value / 10;
-        }
-    }
-
-    public class TstopudeMeasurement : MeasurementRequest
-    {
-
-        public TstopudeMeasurement()
-        {
             modBusAddress = 1;
             modBusSlaveidAddress = 47375;
             modBusCount = 1;
             modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+        }
+        public void convert()
+        {
+            Value = Value / 10;
         }
     }
 }

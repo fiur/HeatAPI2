@@ -10,18 +10,11 @@ namespace HeatAPI.Models
             Name = "Alarmer";
             Unit = "stk";
             Controllable = false;
-        }
-    }
-
-    public class AlarmerMeasurement : MeasurementRequest
-    {
-
-        public AlarmerMeasurement()
-        {
             modBusAddress = 1;
             modBusSlaveidAddress = 41000;
             modBusCount = 1;
             modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
         }
     }
 }

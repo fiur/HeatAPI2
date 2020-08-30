@@ -8,6 +8,11 @@ namespace HeatAPI.Models
         public Dummy()
         {
             Name = "Dummy";
+            modBusAddress = 0;
+            modBusSlaveidAddress = 0;
+            modBusCount = 0;
+            modBusSize = 0;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
         }
         public void convert()
         {
@@ -15,16 +20,5 @@ namespace HeatAPI.Models
         }
     }
 
-    public class DummyMeasurement : MeasurementRequest
-    { 
-    
-        public DummyMeasurement()
-        {
-            modBusAddress = 0;
-            modBusSlaveidAddress = 0;
-            modBusCount = 0;
-            modBusSize = 0;
-        }
-    }
 }
 

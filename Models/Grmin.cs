@@ -10,6 +10,11 @@ namespace HeatAPI.Models
             Name = "Grmin";
             Unit = "";
             Controllable = false;
+            modBusAddress = 1;
+            modBusSlaveidAddress = 43005;
+            modBusCount = 1;
+            modBusSize = 16;
+            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
         }
         public void convert()
         {
@@ -17,15 +22,4 @@ namespace HeatAPI.Models
         }
     }
 
-    public class GrminMeasurement : MeasurementRequest
-    {
-
-        public GrminMeasurement()
-        {
-            modBusAddress = 1;
-            modBusSlaveidAddress = 43005;
-            modBusCount = 1;
-            modBusSize = 16;
-        }
-    }
 }
