@@ -26,10 +26,8 @@ namespace HeatAPI2.Controllers
         //https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-3.1
 
         [HttpGet("cop")]
-        public IEnumerable<MeasurementApiCollection> COP()
+        public ActionResult<List<Cop>> COP()
         {
-
-            var apiResult = new MeasurementApiCollection();
 
             Cop _cop = new Cop(_context);
             _cop.Calculate();
@@ -39,10 +37,9 @@ namespace HeatAPI2.Controllers
             cop.Name = "Cop Value";
             cop.Value = _cop.Value.ToString().Substring(0, 4);
 
-            apiResult.Measurement.Add(cop);
+            JsonResult Measurementsresult = new JsonResult(cop);
 
-            apiResult.Status = 1;
-            yield return apiResult;
+            return Measurementsresult;
 
         }
     }
