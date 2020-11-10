@@ -55,8 +55,8 @@ namespace HeatAPI.Controllers
             {
                 using (_context)
                 {
-                  //  var Item = _context.Dummy.FromSqlRaw("SELECT q.* FROM (Select top 10 * FROM " + m + " order by datetime desc) q ORDER BY q.datetime ASC").ToList<Dummy>();
-                    var Item = _context.Dummy.FromSqlRaw("Select top 20 * FROM " + m + " order by datetime desc").ToList<Dummy>();
+                    //  var Item = _context.Dummy.FromSqlRaw("SELECT q.* FROM (Select top 10 * FROM " + m + " order by datetime desc) q ORDER BY q.datetime ASC").ToList<Dummy>();
+                    var Item = _context.Dummy.FromSqlRaw("SELECT * from ( Select top 1440 * FROM " + m + " order by datetime desc) as total order by datetime asc").ToList<Dummy>();
                     return Item;
                 }
             }
