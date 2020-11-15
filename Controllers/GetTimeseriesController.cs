@@ -28,7 +28,7 @@ namespace HeatAPI.Controllers
         private readonly VarmedataContext _context;
 
 
-        // GET: alarmer
+       
         [HttpPost]
         public async Task<ActionResult<IEnumerable>> GetTimeseries([FromBody] GetTimeseries model)
         {
