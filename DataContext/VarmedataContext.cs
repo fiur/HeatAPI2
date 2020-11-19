@@ -15,7 +15,7 @@ namespace HeatAPI.DataContext
             : base(options)
         {
         }
-
+        public virtual DbSet<TS> TS { get; set; }
         public virtual DbSet<Dummy> Dummy { get; set; }
         public virtual DbSet<Alarmer> Alarmer { get; set; }
         public virtual DbSet<Componoff> Componoff { get; set; }
@@ -41,7 +41,7 @@ namespace HeatAPI.DataContext
         {
             /*if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=ACERSERVER\\SQLEXPRESS;Database=Heatmonitor;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=BW135\\SQLEXPRESS;Database=Heatmonitor;Trusted_Connection=True;");
             }
             */
         }
@@ -69,6 +69,17 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.modBusSize);
                 entity.Ignore(e => e.modBusSlaveidAddress);
             });
+
+            modelBuilder.Entity<TS>(entity =>
+            {
+                entity.ToTable("dummy2");
+                entity.HasNoKey();
+                entity.Property(e => e.date).HasColumnName("date");
+                entity.Property(e => e.rii).HasColumnName("rii");
+                entity.Property(e => e.min).HasColumnName("min");
+                entity.Property(e => e.max).HasColumnName("max");
+                entity.Property(e => e.avg).HasColumnName("avg");
+    });
 
 
             modelBuilder.Entity<Alarmer>(entity =>
