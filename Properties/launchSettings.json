@@ -24,12 +24,21 @@
       },
       "applicationUrl": "http://localhost:9457/"
     },
-    "kestral": {
+    "Custom": {
       "commandName": "Project",
+      "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:9458;http://localhost:9457;http://varmepumpe.local"
+      "applicationUrl": "http://localhost:9457"
+    },
+    "HeatAPI2": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }
