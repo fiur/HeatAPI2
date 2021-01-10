@@ -11,6 +11,7 @@ namespace HeatAPI.Models
         public DateTime Datetime { get; set; }
         public decimal Value { get; set; }
         public string Unit { get; set; }
+        public Int32 multiplier { get; set; }
         public Boolean Controllable { get; set; }
         public int modBusSlaveidAddress { get; set; }
         public int modBusAddress { get; set; }

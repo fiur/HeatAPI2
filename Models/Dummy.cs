@@ -13,6 +13,7 @@ namespace HeatAPI.Models
             modBusCount = 0;
             modBusSize = 0;
             modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+            multiplier = 10;
         }
         public void convert()
         {
