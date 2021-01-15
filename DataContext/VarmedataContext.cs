@@ -397,27 +397,6 @@ namespace HeatAPI.DataContext
                 entity.Ignore(e => e.modBusSlaveidAddress);
             });
 
-            modelBuilder.Entity<Tude>(entity =>
-            {
-                entity.ToTable("tude");
-
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.Datetime)
-                    .HasColumnName("datetime")
-                    .HasColumnType("datetime");
-
-                entity.Property(e => e.Value).HasColumnName("value");
-                entity.Ignore(e => e.Name);
-                entity.Ignore(e => e.Unit);
-                entity.Ignore(e => e.Controllable);
-                entity.Ignore(e => e.modBusAddress);
-                entity.Ignore(e => e.modBusCount);
-                entity.Ignore(e => e.modBusEndpoint);
-                entity.Ignore(e => e.modBusSize);
-                entity.Ignore(e => e.modBusSlaveidAddress);
-            });
-
             modelBuilder.Entity<Tvv>(entity =>
             {
                 entity.ToTable("tvv");

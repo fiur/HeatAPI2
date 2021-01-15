@@ -29,12 +29,11 @@ namespace HeatAPI.Controllers
 
         // GET: api/alarmer/n
         [HttpGet("latest/{m}")]
-        public async Task<ActionResult<List<Dummy>>> Latest(string m)
+        public async Task<ActionResult<List<Measurement>>> Latest(string m)
         {
             using (_context)
             {
-                var Item = _context.Dummy.FromSqlRaw("Select top 1 * FROM " + m + " order by datetime desc").ToList<Dummy>();
-
+                var Item = _context.Tude.FromSqlRaw("Select top 1 * FROM " + m + " order by datetime desc").ToList<Measurement>();
                 return Item;
             }
         }

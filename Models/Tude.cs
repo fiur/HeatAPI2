@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("tude")]
     public class Tude : Measurement
     {
         public Tude()
