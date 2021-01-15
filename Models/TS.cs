@@ -8,9 +8,7 @@ namespace HeatAPI.Models
     {
         public DateTime date { set; get; }
         public int rii { set; get; }
-        public Decimal min { set; get; }
-        public Decimal max { set; get; }
-        public Decimal avg { set; get; }
+        public Decimal func { set; get; }
     }
 
 }

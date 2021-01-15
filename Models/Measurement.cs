@@ -16,7 +16,7 @@ namespace HeatAPI.Models
         public decimal Value { get; set; }
         [NotMapped]
         public string Unit { get; set; }
-        [NotMapped]
+        public Int32 multiplier { get; set; }
         public Boolean Controllable { get; set; }
         [NotMapped]
         public int modBusSlaveidAddress { get; set; }

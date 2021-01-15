@@ -76,10 +76,8 @@ namespace HeatAPI.DataContext
                 entity.HasNoKey();
                 entity.Property(e => e.date).HasColumnName("date");
                 entity.Property(e => e.rii).HasColumnName("rii");
-                entity.Property(e => e.min).HasColumnName("min");
-                entity.Property(e => e.max).HasColumnName("max");
-                entity.Property(e => e.avg).HasColumnName("avg");
-    });
+                entity.Property(e => e.func).HasColumnName("func");
+            });
 
 
             modelBuilder.Entity<Alarmer>(entity =>

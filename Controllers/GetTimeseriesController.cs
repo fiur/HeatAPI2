@@ -34,17 +34,29 @@ namespace HeatAPI.Controllers
         {
             using (_context)
             {
-                string measurementType = model.measurementType.ToString();
-                string groupsize = model.groupsize.ToString();
-                string startdate = model.starttime.Date.ToString("yyyy-MM-dd");
-                string enddate = model.endtime.Date.ToString("yyyy-MM-dd");
-                string minsql = ", MIN(aa.[value]) AS [min]";
-                string maxsql = ", MAX(aa.[value]) AS [max]";
-                string avgsql = ", AVG(aa.[value]) AS [avg]";
+                string measurementType = model.MeasurementType.ToString();
+                string groupSize = model.GroupSize.ToString();
+                string startDate = model.StartTime.Date.ToString("yyyy-MM-dd");
+                string endDate = model.EndTime.Date.ToString("yyyy-MM-dd");
+                string reqFunction = model.ReqFunction.ToString();
+                string sqlFunc = "";
 
-                string sql = "SELECT DATEADD(MINUTE, DATEDIFF(MINUTE, '2000', aa.[datetime]) / {0} * {0}, '2000') AS [date], COUNT(*) AS[rii] {3} {4} {5} FROM [heatmonitor].[dbo].[{6}] AS aa WHERE aa.datetime > CONVERT(datetime, '{1}') AND aa.datetime < CONVERT(datetime, '{2}') GROUP BY DATEADD(MINUTE, DATEDIFF(MINUTE, '2000', aa.[datetime]) / {0} * {0}, '2000') ORDER BY [date]";
+                switch (reqFunction)
+                {
+                    case "min":
+                        sqlFunc = ", MIN(aa.[value]) AS [func]";
+                        break;
+                    case "max":
+                        sqlFunc = ", MAX(aa.[value]) AS [func]";
+                        break;
+                    case "avg":
+                        sqlFunc = ", AVG(aa.[value]) AS [func]";
+                        break;
+                }
 
-                string computedsql = string.Format(sql, groupsize, startdate, enddate, minsql, maxsql, avgsql, measurementType);
+                string sql = "SELECT DATEADD(MINUTE, DATEDIFF(MINUTE, '2000', aa.[datetime]) / {0} * {0}, '2000') AS [date], COUNT(*) AS[rii] {3} FROM [heatmonitor].[dbo].[{4}] AS aa WHERE aa.datetime > CONVERT(datetime, '{1}') AND aa.datetime < CONVERT(datetime, '{2}') GROUP BY DATEADD(MINUTE, DATEDIFF(MINUTE, '2000', aa.[datetime]) / {0} * {0}, '2000') ORDER BY [date]";
+
+                string computedsql = string.Format(sql, groupSize, startDate, endDate, sqlFunc, measurementType);
 
                 var Item = _context.TS.FromSqlRaw(computedsql).ToList();
 
@@ -55,12 +67,11 @@ namespace HeatAPI.Controllers
 
     public class GetTimeseries
     {
-        public String measurementType { set; get; }
-        public DateTime starttime { set; get; } 
-        public DateTime endtime { set; get; } 
-        public int groupsize { set; get; } 
-        public Boolean min { set; get; }
-        public Boolean max { set; get; }
-        public Boolean avg { set; get; }
+        public String MeasurementType { set; get; }
+        public DateTime StartTime { set; get; } 
+        public DateTime EndTime { set; get; } 
+        public String GroupSize { set; get; } 
+        public String ReqFunction { set; get; }
+
     }
 }
