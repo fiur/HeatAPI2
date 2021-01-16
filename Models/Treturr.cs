@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("Treturr")]
     public class Treturr : Measurement
     {
         public Treturr()

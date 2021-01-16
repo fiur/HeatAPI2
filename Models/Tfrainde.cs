@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("Tfrainde")]
     public class Tfrainde : Measurement
     {
-
         public Tfrainde()
         {
             Name = "Tfrainde";

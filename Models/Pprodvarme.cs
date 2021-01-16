@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("Pprodvarme")]
     public class Pprodvarme : Measurement
     {
         public Pprodvarme()

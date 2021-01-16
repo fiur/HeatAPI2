@@ -24,6 +24,7 @@ namespace HeatAPI.Controllers
         {
             _context = context;
         }
+
         private readonly VarmedataContext _context;
 
 

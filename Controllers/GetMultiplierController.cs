@@ -29,12 +29,12 @@ namespace HeatAPI.Controllers
 
         // GET: api/get/multiplier/n
         [HttpGet("{m}/{n}")]
-        public async Task<ActionResult<List<Dummy>>> GetN(long n, string m)
+        public async Task<ActionResult<List<Measurement>>> GetN(long n, string m)
         {
             using (_context)
             {
 
-                var Item = _context.Dummy.FromSqlRaw("Select top " + n + " * FROM " + m + " order by datetime desc").ToList<Dummy>();
+                var Item = _context.Measurement.FromSqlRaw("Select top " + n + " * FROM " + m + " order by datetime desc").ToList<Measurement>();
 
                 return Item;
             }

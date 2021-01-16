@@ -27,13 +27,14 @@ namespace HeatAPI.Controllers
         private readonly VarmedataContext _context;
 
 
-        // GET: api/alarmer/n
+        // GET: api/latest/n
         [HttpGet("latest/{m}")]
-        public async Task<ActionResult<List<Dummy>>> Latest(string m)
+        public async Task<ActionResult<List<Measurement>>> Latest(string m)
         {
+
             using (_context)
             {
-                var Item = _context.Dummy.FromSqlRaw("Select top 1 * FROM " + m + " order by datetime desc").ToList<Dummy>();
+                var Item = _context.Measurement.FromSqlRaw("Select top 1 * FROM " + m + " order by datetime desc").ToList<Measurement>();
 
                 return Item;
             }
@@ -41,11 +42,11 @@ namespace HeatAPI.Controllers
 
         // GET: api/alarmer/n
         [HttpGet("{m}/{n}")]
-        public async Task<ActionResult<List<Dummy>>> GetN(long n, string m)
+        public async Task<ActionResult<List<Measurement>>> GetN(long n, string m)
         {
             using (_context)
             {
-                var Item = _context.Dummy.FromSqlRaw("Select top " + n + " * FROM " + m + " order by datetime desc").ToList<Dummy>();
+                var Item = _context.Measurement.FromSqlRaw("Select top " + n + " * FROM " + m + " order by datetime desc").ToList<Measurement>();
 
                 return Item;
             }

@@ -27,22 +27,22 @@ namespace HeatAPI.Controllers
 
         // GET: lowest/tude
         [HttpGet("lowest/{m}")]
-        public ActionResult<List<Dummy>> Lowest(string m)
+        public ActionResult<List<Measurement>> Lowest(string m)
         {
             using (_context)
             {
-                var Item = _context.Dummy.FromSqlRaw("Select top 1 * FROM " + m + " where (datetime >= DATEADD(day, -1, GETDATE()) order by value asc").ToList<Dummy>();
+                var Item = _context.Measurement.FromSqlRaw("Select top 1 * FROM " + m + " where (datetime >= DATEADD(day, -1, GETDATE()) order by value asc").ToList<Measurement>();
                 return Item;
             }
         }
 
         // GET: highest/tude
         [HttpGet("highest/{m}")]
-        public ActionResult<List<Dummy>> Highest(string m)
+        public ActionResult<List<Measurement>> Highest(string m)
         {
             using (_context)
             {
-                var Item = _context.Dummy.FromSqlRaw("Select top 1 * FROM " + m + " where (datetime >= DATEADD(day, -1, GETDATE()) order by value desc").ToList<Dummy>();
+                var Item = _context.Measurement.FromSqlRaw("Select top 1 * FROM " + m + " where (datetime >= DATEADD(day, -1, GETDATE()) order by value desc").ToList<Measurement>();
                 return Item;
             }
         }
@@ -50,13 +50,12 @@ namespace HeatAPI.Controllers
 
         // GET: /tude
         [HttpGet("{m}")]
-        public ActionResult<List<Dummy>> All(string m)
+        public ActionResult<List<Measurement>> All(string m)
         {
             {
                 using (_context)
                 {
-                  //  var Item = _context.Dummy.FromSqlRaw("SELECT q.* FROM (Select top 10 * FROM " + m + " order by datetime desc) q ORDER BY q.datetime ASC").ToList<Dummy>();
-                  var Item = _context.Dummy.FromSqlRaw("SELECT * from ( Select top 1440 * FROM " + m + " order by datetime desc) as total order by datetime asc").ToList<Dummy>();
+                  var Item = _context.Measurement.FromSqlRaw("SELECT * from ( Select top 1440 * FROM " + m + " order by datetime desc) as total order by datetime asc").ToList<Measurement>();
                   return Item;
                 }
             }
