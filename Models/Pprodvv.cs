@@ -12,16 +12,16 @@ namespace HeatAPI.Models
             Name = "Pprodvv";
             Unit = "kwh";
             Controllable = false;
-            modBusAddress = 1;
-            modBusSlaveidAddress = 44306;
-            modBusCount = 1;
-            modBusSize = 32;
-            modBusEndpoint = "http://modbusgw.local/api/RWSingle/uint32/";
-            multiplier = 10;
+            ModBusAddress = 1;
+            ModBusSlaveidAddress = 44306;
+            ModBusCount = 1;
+            ModBusSize = 32;
+            ModBusEndpoint = "http://modbusgw.local/api/RWSingle/uint32/";
+            Multiplier = 10;
         }
         public void convert()
         {
-            Value = Value / multiplier;
+            Value = Value / Multiplier;
         }
     }
 }

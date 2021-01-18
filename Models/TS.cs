@@ -8,9 +8,9 @@ namespace HeatAPI.Models
     [NotMapped]
     public class TS
     {
-        public DateTime date { set; get; }
-        public int rii { set; get; }
-        public Decimal func { set; get; }
+        public DateTime Date { set; get; }
+        public int Rii { set; get; }
+        public Decimal Func { set; get; }
     }
 
 }

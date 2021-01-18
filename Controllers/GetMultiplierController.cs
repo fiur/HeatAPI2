@@ -15,19 +15,19 @@ using System.Text.Json;
 
 namespace HeatAPI.Controllers
 {
-    [Route("api/Get/multiplier")]
+    [Route("api/Get/Multiplier")]
     [Produces("application/json")]
-    public class GetmultiplierController : Controller
+    public class GetMultiplierController : Controller
     {
         //Localhost:5555/api/Get/tude/5
-        public GetmultiplierController(VarmedataContext context)
+        public GetMultiplierController(VarmedataContext context)
         {
             _context = context;
         }
         private readonly VarmedataContext _context;
 
 
-        // GET: api/get/multiplier/n
+        // GET: api/get/Multiplier/n
         [HttpGet("{m}/{n}")]
         public async Task<ActionResult<List<Measurement>>> GetN(long n, string m)
         {

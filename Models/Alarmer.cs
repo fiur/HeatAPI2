@@ -11,12 +11,12 @@ namespace HeatAPI.Models
             Name = "Alarmer";
             Unit = "stk";
             Controllable = false;
-            modBusAddress = 1;
-            modBusSlaveidAddress = 41000;
-            modBusCount = 1;
-            modBusSize = 16;
-            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
-            multiplier = 1;
+            ModBusAddress = 1;
+            ModBusSlaveidAddress = 41000;
+            ModBusCount = 1;
+            ModBusSize = 16;
+            ModBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+            Multiplier = 1;
         }
     }
 }

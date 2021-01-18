@@ -35,14 +35,5 @@ namespace HeatAPI.DataContext
         public virtual DbSet<Tvv> Tvv { get; set; }
         public virtual DbSet<Tzinde> Tzinde { get; set; }
         public virtual DbSet<Vkurve> Vkurve { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            /*if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=BW135\\SQLEXPRESS;Database=Heatmonitor;Trusted_Connection=True;");
-            }
-            */
-        }
     }
 }

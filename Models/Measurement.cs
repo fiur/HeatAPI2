@@ -5,7 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
-    public class Measurement
+    [Table("Measurement")]
+    public class Measurement : IMinterface
     {
         [Key]
         public Int32 Id { get; set; }
@@ -18,19 +19,20 @@ namespace HeatAPI.Models
         [NotMapped]
         public string Unit { get; set; }
         [NotMapped]
-        public Int32 multiplier { get; set; }
+        public Int32 Multiplier { get; set; }
         [NotMapped]
         public Boolean Controllable { get; set; }
         [NotMapped]
-        public int modBusSlaveidAddress { get; set; }
+        public int ModBusSlaveidAddress { get; set; }
         [NotMapped]
-        public int modBusAddress { get; set; }
+        public int ModBusAddress { get; set; }
         [NotMapped]
-        public int modBusCount { get; set; }
+        public int ModBusCount { get; set; }
         [NotMapped]
-        public int modBusSize { get; set; }
+        public int ModBusSize { get; set; }
         [NotMapped]
-        public String modBusEndpoint { get; set; }
+        public String ModBusEndpoint { get; set; }
+
     }
 }
 
