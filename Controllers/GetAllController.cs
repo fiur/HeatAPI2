@@ -15,6 +15,7 @@ using System.Text.Json;
 
 namespace HeatAPI.Controllers
 {
+    [ApiController]
     [Route("api/Get/all")]
     [Produces("application/json")]
     public class GetAllController : Controller
@@ -26,7 +27,6 @@ namespace HeatAPI.Controllers
         }
 
         private readonly VarmedataContext _context;
-
 
         public JsonResult GetAll()
         {

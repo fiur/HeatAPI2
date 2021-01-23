@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HeatAPI2.Controllers
 {
+    [ApiController]
     [Route("api/Get/")]
     [Produces("application/json")]
     public class GetCopController : Controller

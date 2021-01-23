@@ -16,6 +16,7 @@ using React.Sample.Webpack.CoreMvc;
 
 namespace HeatAPI.Controllers
 {
+    [ApiController]
     [Route("api/Get/ts")]
     [Produces("application/json")]
     public class GetTimeseriesController : Controller
@@ -30,7 +31,7 @@ namespace HeatAPI.Controllers
 
        
         [HttpPost]
-        public async Task<ActionResult<IEnumerable>> GetTimeseries([FromBody] GetTimeseries model)
+        public ActionResult<IEnumerable> GetTimeseries([FromBody] GetTimeseries model)
         {
             using (_context)
             {

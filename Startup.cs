@@ -33,30 +33,31 @@ namespace React.Sample.Webpack.CoreMvc
 									  builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
 								  });
 			});
+			services.AddSwaggerDocument();
 
-			services.AddMvc();
-
+			services.AddMvcCore().AddApiExplorer();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostEnvironment env)
 		{
 			app.UseCors(MyAllowSpecificOrigins);
-
 			if (env.IsDevelopment())
 			{
 					app.UseDeveloperExceptionPage();
 			}
 
 			app.UseStaticFiles();
-
 			app.UseRouting();
+			app.UseOpenApi(); // serve documents (same as app.UseSwagger())
+			app.UseSwaggerUi3(); // serve Swagger UI
 
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute("default", "{path?}", new { controller = "Home", action = "Index" });
 				endpoints.MapControllerRoute("api", "api/tude/{n}", new { controller = "get", action = "GetTude" });
 			});
+
 		}
 	}
 }

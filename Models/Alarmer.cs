@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("alarmer")]
     public class Alarmer : Measurement
     {
         public Alarmer()

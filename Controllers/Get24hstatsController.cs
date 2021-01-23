@@ -15,6 +15,7 @@ using System.Text.Json;
 
 namespace HeatAPI.Controllers
 {
+    [ApiController]
     [Route("api/Get/24h/")]
     [Produces("application/json")]
     public class Get24hstatsController : Controller

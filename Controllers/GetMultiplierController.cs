@@ -15,6 +15,7 @@ using System.Text.Json;
 
 namespace HeatAPI.Controllers
 {
+    [ApiController]
     [Route("api/Get/Multiplier")]
     [Produces("application/json")]
     public class GetMultiplierController : Controller
@@ -29,7 +30,7 @@ namespace HeatAPI.Controllers
 
         // GET: api/get/Multiplier/n
         [HttpGet("{m}/{n}")]
-        public async Task<ActionResult<List<Measurement>>> GetN(long n, string m)
+        public ActionResult<List<Measurement>> GetN(long n, string m)
         {
             using (_context)
             {
