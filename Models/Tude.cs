@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace HeatAPI.Models
 {
     [Table("Tude")]
-    public class Tude : IMinterface
+    public class Tude : Measurement
     {
         [Key]
         public Int32 Id { get; set; }

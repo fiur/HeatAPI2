@@ -19,9 +19,9 @@ namespace HeatAPI.Models
             ModBusEndpoint = "http://modbusgw.local/api/RWSingle/uint32/";
             Multiplier = 10;
         }
-        public void convert()
+        public void Convert()
         {
-            Value = Value / Multiplier;
+            Value /= Multiplier;
         }
     }
 }

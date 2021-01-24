@@ -35,5 +35,19 @@ namespace HeatAPI.DataContext
         public virtual DbSet<Tvv> Tvv { get; set; }
         public virtual DbSet<Tzinde> Tzinde { get; set; }
         public virtual DbSet<Vkurve> Vkurve { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Alarmer>().ToTable("Alarmer");
+            modelBuilder.Entity<Componoff>().ToTable("tinde");
+            modelBuilder.Entity<Grmin>().ToTable("tinde");
+            modelBuilder.Entity<Pprodvarme>().ToTable("tinde");
+            modelBuilder.Entity<Pprodvv>().ToTable("tinde");
+            modelBuilder.Entity<Ptotude>().ToTable("tinde");
+            modelBuilder.Entity<Pude>().ToTable("tinde");
+            modelBuilder.Entity<Qcirc>().ToTable("tinde");
+            modelBuilder.Entity<Tfrainde>().ToTable("tinde");
+            modelBuilder.Entity<Tfremberr>().ToTable("tinde");
+        }
     }
 }

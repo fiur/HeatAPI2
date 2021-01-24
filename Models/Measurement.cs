@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
-    [Table("Measurement")]
-    public class Measurement : IMinterface
+    [NotMapped]
+    public abstract class Measurement
     {
         [Key]
         public Int32 Id { get; set; }

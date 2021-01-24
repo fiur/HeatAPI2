@@ -33,13 +33,13 @@ namespace HeatAPI.Controllers
             using (_context)
             {
                 // Create a List
-                List<IMinterface> Mlist = new List<IMinterface>();
+                List<Measurement> Mlist = new List<Measurement>();
 
                 Tinde _tinde = _context.Tinde.OrderByDescending(p => p.Datetime).FirstOrDefault();
-                Mlist.Add((IMinterface)_tinde);
+                Mlist.Add((Measurement)_tinde);
 
                 Tude _tude = _context.Tude.OrderByDescending(p => p.Datetime).FirstOrDefault();
-                Mlist.Add((IMinterface)_tude);
+                Mlist.Add((Measurement)_tude);
 
                 //Treturr _treturr = _context.Treturr.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 //Mlist.Add(_treturr);
