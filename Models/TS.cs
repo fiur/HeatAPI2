@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
-    [NotMapped]
+
     public class TS
     {
         public DateTime Date { set; get; }

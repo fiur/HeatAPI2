@@ -38,16 +38,26 @@ namespace HeatAPI.DataContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TS>().HasNoKey();
             modelBuilder.Entity<Alarmer>().ToTable("Alarmer");
-            modelBuilder.Entity<Componoff>().ToTable("tinde");
-            modelBuilder.Entity<Grmin>().ToTable("tinde");
-            modelBuilder.Entity<Pprodvarme>().ToTable("tinde");
-            modelBuilder.Entity<Pprodvv>().ToTable("tinde");
-            modelBuilder.Entity<Ptotude>().ToTable("tinde");
-            modelBuilder.Entity<Pude>().ToTable("tinde");
-            modelBuilder.Entity<Qcirc>().ToTable("tinde");
-            modelBuilder.Entity<Tfrainde>().ToTable("tinde");
-            modelBuilder.Entity<Tfremberr>().ToTable("tinde");
+            modelBuilder.Entity<Componoff>().ToTable("Componoff");
+            modelBuilder.Entity<Grmin>().ToTable("Grmin");
+            modelBuilder.Entity<Pprodvarme>().ToTable("Pprodvarme");
+            modelBuilder.Entity<Pprodvv>().ToTable("Pprodvv");
+            modelBuilder.Entity<Ptotude>().ToTable("Ptotude");
+            modelBuilder.Entity<Pude>().ToTable("Pude");
+            modelBuilder.Entity<Qcirc>().ToTable("Qcirc");
+            modelBuilder.Entity<Tfrainde>().ToTable("Tfrainde");
+            modelBuilder.Entity<Tfremberr>().ToTable("Tfremberr");
+            modelBuilder.Entity<Tfremr>().ToTable("Tfremr");
+            modelBuilder.Entity<Tinde>().ToTable("Tinde");
+            modelBuilder.Entity<Treturr>().ToTable("Treturr");
+            modelBuilder.Entity<Tstopude>().ToTable("Tstopude");
+            modelBuilder.Entity<Ttilinde>().ToTable("Ttilinde");
+            modelBuilder.Entity<Tude>().ToTable("Tude");
+            modelBuilder.Entity<Tvv>().ToTable("Tvv");
+            modelBuilder.Entity<Tzinde>().ToTable("Tzinde");
+            modelBuilder.Entity<Vkurve>().ToTable("Vkurve");
         }
     }
 }
