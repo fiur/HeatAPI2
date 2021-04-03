@@ -9,7 +9,7 @@ namespace HeatAPI.Models
     {
         public Ttilinde()
         {
-            Name = "Tilinde";
+            Name = "Ttilinde";
             Unit = "°C";
             Controllable = false;
             ModBusAddress = 1;
