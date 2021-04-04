@@ -16,6 +16,7 @@ namespace HeatAPI.DataContext
         }
         public virtual DbSet<Measurement> Measurement { get; set; }
         public virtual DbSet<TS> TS { get; set; }
+        public virtual DbSet<H24> H24 { get; set; }
         public virtual DbSet<Alarmer> Alarmer { get; set; }
         public virtual DbSet<Componoff> Componoff { get; set; }
         public virtual DbSet<Grmin> Grmin { get; set; }
@@ -38,6 +39,7 @@ namespace HeatAPI.DataContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<H24>().HasNoKey();
             modelBuilder.Entity<TS>().HasNoKey();
             modelBuilder.Entity<Alarmer>().ToTable("Alarmer");
             modelBuilder.Entity<Componoff>().ToTable("Componoff");

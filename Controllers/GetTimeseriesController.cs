@@ -73,6 +73,5 @@ namespace HeatAPI.Controllers
         public DateTime EndTime { set; get; } 
         public String GroupSize { set; get; } 
         public String ReqFunction { set; get; }
-
     }
 }

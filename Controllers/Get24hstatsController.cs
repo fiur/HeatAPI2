@@ -26,18 +26,26 @@ namespace HeatAPI.Controllers
         }
         private readonly VarmedataContext _context;
 
-        // GET: /tude
-        [HttpGet("{m}")]
-        public ActionResult<List<Measurement>> All(string m)
+        // post: /tude
+        [HttpPost]
+        public ActionResult<IEnumerable> All([FromBody] Get24h model)
         {
             {
                 using (_context)
                 {
-                  var Item = _context.Measurement.FromSqlRaw("SELECT * from ( Select top 1440 * FROM " + m + " order by datetime desc) as total order by datetime asc").ToList<Measurement>();
+                  string measurementType = model.MeasurementType.ToString();
+                  var sql = "SELECT [datetime], [value] from ( Select top 1440 * FROM {0} order by datetime desc) as total order by datetime asc";
+                  string computedsql = string.Format(sql, measurementType);
+                  var Item = _context.H24.FromSqlRaw(computedsql).ToList();
                   return Item;
                 }
             }
 
         }
     }
+    public class Get24h
+    {
+        public String MeasurementType { set; get; }
+    }
+
 }
