@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("Pprodvarme")]
     public class Pprodvarme : Measurement
     {
         public Pprodvarme()
@@ -10,16 +12,16 @@ namespace HeatAPI.Models
             Name = "Pprodvarme";
             Unit = "kwh";
             Controllable = false;
-            modBusAddress = 1;
-            modBusSlaveidAddress = 44308;
-            modBusCount = 1;
-            modBusSize = 32;
-            modBusEndpoint = "http://modbusgw.local/api/RWSingle/uint32/";
-            multiplier = 10;
+            ModBusAddress = 1;
+            ModBusSlaveidAddress = 44308;
+            ModBusCount = 1;
+            ModBusSize = 32;
+            ModBusEndpoint = "http://modbusgw.local/api/RWSingle/uint32/";
+            Multiplier = 10;
         }
-        public void convert()
+        public void Convert()
         {
-            Value = Value / multiplier;
+            Value /= Multiplier;
         }
     }
 }

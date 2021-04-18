@@ -15,6 +15,7 @@ using System.Text.Json;
 
 namespace HeatAPI.Controllers
 {
+    [ApiController]
     [Route("api/Get/24h/")]
     [Produces("application/json")]
     public class Get24hstatsController : Controller
@@ -25,42 +26,26 @@ namespace HeatAPI.Controllers
         }
         private readonly VarmedataContext _context;
 
-        // GET: lowest/tude
-        [HttpGet("lowest/{m}")]
-        public ActionResult<List<Dummy>> Lowest(string m)
-        {
-            using (_context)
-            {
-                var Item = _context.Dummy.FromSqlRaw("Select top 1 * FROM " + m + " where (datetime >= DATEADD(day, -1, GETDATE()) order by value asc").ToList<Dummy>();
-                return Item;
-            }
-        }
-
-        // GET: highest/tude
-        [HttpGet("highest/{m}")]
-        public ActionResult<List<Dummy>> Highest(string m)
-        {
-            using (_context)
-            {
-                var Item = _context.Dummy.FromSqlRaw("Select top 1 * FROM " + m + " where (datetime >= DATEADD(day, -1, GETDATE()) order by value desc").ToList<Dummy>();
-                return Item;
-            }
-        }
-
-
-        // GET: /tude
-        [HttpGet("{m}")]
-        public ActionResult<List<Dummy>> All(string m)
+        // post: /tude
+        [HttpPost]
+        public ActionResult<IEnumerable> All([FromBody] Get24h model)
         {
             {
                 using (_context)
                 {
-                  //  var Item = _context.Dummy.FromSqlRaw("SELECT q.* FROM (Select top 10 * FROM " + m + " order by datetime desc) q ORDER BY q.datetime ASC").ToList<Dummy>();
-                  var Item = _context.Dummy.FromSqlRaw("SELECT * from ( Select top 1440 * FROM " + m + " order by datetime desc) as total order by datetime asc").ToList<Dummy>();
+                  string measurementType = model.MeasurementType.ToString();
+                  var sql = "SELECT [datetime], [value] from ( Select top 1440 * FROM {0} order by datetime desc) as total order by datetime asc";
+                  string computedsql = string.Format(sql, measurementType);
+                  var Item = _context.H24.FromSqlRaw(computedsql).ToList();
                   return Item;
                 }
             }
 
         }
     }
+    public class Get24h
+    {
+        public String MeasurementType { set; get; }
+    }
+
 }

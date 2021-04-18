@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("Treturr")]
     public class Treturr : Measurement
     {
         public Treturr()
@@ -10,16 +12,16 @@ namespace HeatAPI.Models
             Name = "Treturr";
             Unit = "°C";
             Controllable = false;
-            modBusAddress = 1;
-            modBusSlaveidAddress = 40012;
-            modBusCount = 1;
-            modBusSize = 16;
-            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
-            multiplier = 10;
+            ModBusAddress = 1;
+            ModBusSlaveidAddress = 40012;
+            ModBusCount = 1;
+            ModBusSize = 16;
+            ModBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+            Multiplier = 10;
         }
-        public void convert()
+        public void Convert()
         {
-            Value = Value / multiplier;
+            Value /= Multiplier;
         }
     }
 }

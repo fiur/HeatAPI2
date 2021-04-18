@@ -15,26 +15,27 @@ using System.Text.Json;
 
 namespace HeatAPI.Controllers
 {
-    [Route("api/Get/multiplier")]
+    [ApiController]
+    [Route("api/Get/Multiplier")]
     [Produces("application/json")]
-    public class GetmultiplierController : Controller
+    public class GetMultiplierController : Controller
     {
         //Localhost:5555/api/Get/tude/5
-        public GetmultiplierController(VarmedataContext context)
+        public GetMultiplierController(VarmedataContext context)
         {
             _context = context;
         }
         private readonly VarmedataContext _context;
 
 
-        // GET: api/get/multiplier/n
+        // GET: api/get/Multiplier/n
         [HttpGet("{m}/{n}")]
-        public async Task<ActionResult<List<Dummy>>> GetN(long n, string m)
+        public ActionResult<List<Measurement>> GetN(long n, string m)
         {
             using (_context)
             {
 
-                var Item = _context.Dummy.FromSqlRaw("Select top " + n + " * FROM " + m + " order by datetime desc").ToList<Dummy>();
+                var Item = _context.Measurement.FromSqlRaw("Select top " + n + " * FROM " + m + " order by datetime desc").ToList<Measurement>();
 
                 return Item;
             }

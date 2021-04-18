@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
+    [Table("Vkurve")]
     public class Vkurve : Measurement
     {
         public Vkurve()
@@ -10,16 +12,16 @@ namespace HeatAPI.Models
             Name = "Vkurve";
             Unit = "";
             Controllable = true;
-            modBusAddress = 1;
-            modBusSlaveidAddress = 47007;
-            modBusCount = 1;
-            modBusSize = 16;
-            modBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
-            multiplier = 1;
+            ModBusAddress = 1;
+            ModBusSlaveidAddress = 47007;
+            ModBusCount = 1;
+            ModBusSize = 16;
+            ModBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
+            Multiplier = 1;
         }
         public void convert()
         {
-            Value = Value / multiplier;
+            Value = Value / Multiplier;
         }
     }
 }
