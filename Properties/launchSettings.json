@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "HeatAPI2": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50336;http://localhost:50337"
+    }
+  }
+}
