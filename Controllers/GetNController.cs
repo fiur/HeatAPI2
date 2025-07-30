@@ -14,6 +14,7 @@ using System.Collections;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 using System.Net.Mime;
+using System.Runtime.Intrinsics.X86;
 
 namespace HeatAPI.Controllers
 {
@@ -30,12 +31,12 @@ namespace HeatAPI.Controllers
         private readonly VarmedataContext _context;
 
         // --- fra her 
-        [HttpGet("Alarmer/{n}")]
-        public ActionResult<List<Alarmer>> GetNAlarmer(int n)
+        [HttpGet("Alarmnr/{n}")]
+        public ActionResult<List<Alarmnr>> GetNAlarmnr(int n)
         {
             using (_context)
             {
-                var Item = _context.Alarmer.OrderByDescending(a => a.Datetime).Take(n).ToList<Alarmer>();
+                var Item = _context.Alarmnr.OrderByDescending(a => a.Datetime).Take(n).ToList<Alarmnr>();
                 return Item;
             }
         }
@@ -128,24 +129,24 @@ namespace HeatAPI.Controllers
             }
         }
 
-        // --- fra her Tfremberr
-        [HttpGet("Tfremberr/{n}")]
-        public ActionResult<List<Tfremberr>> GetNTfremberr(int n)
+        // --- fra her Tfrember
+        [HttpGet("Tfrember/{n}")]
+        public ActionResult<List<Tfrember>> GetNTfrember(int n)
         {
             using (_context)
             {
-                var Item = _context.Tfremberr.OrderByDescending(a => a.Datetime).Take(n).ToList<Tfremberr>();
+                var Item = _context.Tfrember.OrderByDescending(a => a.Datetime).Take(n).ToList<Tfrember>();
                 return Item;
             }
         }
 
-        // --- fra her Tfremr
-        [HttpGet("Tfremr/{n}")]
-        public ActionResult<List<Tfremr>> GetNTfremr(int n)
+        // --- fra her Tfrem
+        [HttpGet("Tfrem/{n}")]
+        public ActionResult<List<Tfrem>> GetNTfrem(int n)
         {
             using (_context)
             {
-                var Item = _context.Tfremr.OrderByDescending(a => a.Datetime).Take(n).ToList<Tfremr>();
+                var Item = _context.Tfrem.OrderByDescending(a => a.Datetime).Take(n).ToList<Tfrem>();
                 return Item;
             }
         }
@@ -161,13 +162,13 @@ namespace HeatAPI.Controllers
             }
         }
 
-        // --- fra her Treturr
-        [HttpGet("Treturr/{n}")]
-        public ActionResult<List<Treturr>> GetNTreturr(int n)
+        // --- fra her Tretur
+        [HttpGet("Tretur/{n}")]
+        public ActionResult<List<Tretur>> GetNTretur(int n)
         {
             using (_context)
             {
-                var Item = _context.Treturr.OrderByDescending(a => a.Datetime).Take(n).ToList<Treturr>();
+                var Item = _context.Tretur.OrderByDescending(a => a.Datetime).Take(n).ToList<Tretur>();
                 return Item;
             }
         }
@@ -237,6 +238,63 @@ namespace HeatAPI.Controllers
                 return Item;
             }
         }
+
+  // --- fra her Treturfordeler
+        [HttpGet("Treturfordeler/{n}")]
+        public ActionResult<List<Treturfordeler>> GetNTreturfordeler(int n)
+        {
+             using (_context)
+             {
+                    var Item = _context.Treturfordeler.OrderByDescending(a => a.Datetime).Take(n).ToList<Treturfordeler>();
+                    return Item;
+             }
+        }
+
+        // --- fra her Tfremfordeler
+        [HttpGet("Tfremfordeler/{n}")]
+        public ActionResult<List<Tfremfordeler>> GetNTfremfordeler(int n)
+        {
+            using (_context)
+            {
+                var Item = _context.Tfremfordeler.OrderByDescending(a => a.Datetime).Take(n).ToList<Tfremfordeler>();
+                return Item;
+            }
+        }
+
+        // --- fra her Treturradiator
+        [HttpGet("Treturradiator/{n}")]
+        public ActionResult<List<Treturradiator>> GetNTreturradiator(int n)
+        {
+            using (_context)
+            {
+                var Item = _context.Treturradiator.OrderByDescending(a => a.Datetime).Take(n).ToList<Treturradiator>();
+                return Item;
+            }
+        }
+
+        // --- fra her Trumfordeler
+        [HttpGet("Trumfordeler/{n}")]
+        public ActionResult<List<Trumfordeler>> GetNTrumfordeler(int n)
+        {
+            using (_context)
+            {
+                var Item = _context.Trumfordeler.OrderByDescending(a => a.Datetime).Take(n).ToList<Trumfordeler>();
+                return Item;
+            }
+        }
+
+        // --- fra her Qcircradiator
+        [HttpGet("Qcircradiator/{n}")]
+        public ActionResult<List<Qcircradiator>> GetNQcircradiator(int n)
+        {
+            using (_context)
+            {
+                var Item = _context.Qcircradiator.OrderByDescending(a => a.Datetime).Take(n).ToList<Qcircradiator>();
+                return Item;
+            }
+        }
+
+
 
     }
 

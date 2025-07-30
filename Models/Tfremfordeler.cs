@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
-    [Table("Tfremberr")]
-    public class Tfremberr : Measurement
+    [Table("Tfremfordeler")]
+    public class Tfremfordeler : Measurement
     {
-        public Tfremberr()
+        public Tfremfordeler()
         {
-            Name = "Tfremberr";
+            Name = "Tfremfordeler";
             Unit = "°C";
             Controllable = false;
             ModBusAddress = 1;
-            ModBusSlaveidAddress = 43009;
+          /*  ModBusSlaveidAddress = ""; */
             ModBusCount = 1;
             ModBusSize = 16;
             ModBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
-            Multiplier = 10;
+            Multiplier = 1;
         }
         public void convert()
         {

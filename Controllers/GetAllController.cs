@@ -41,8 +41,8 @@ namespace HeatAPI.Controllers
                 Tude _tude = _context.Tude.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_tude);
 
-                Treturr _treturr = _context.Treturr.OrderByDescending(p => p.Datetime).FirstOrDefault();
-                Mlist.Add(_treturr);
+                Tretur _tretur = _context.Tretur.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_tretur);
 
                 Tvv _tvv = _context.Tvv.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_tvv);
@@ -50,11 +50,11 @@ namespace HeatAPI.Controllers
                 Tzinde _tzinde = _context.Tzinde.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_tzinde);
 
-                Tfremr _tfremr = _context.Tfremr.OrderByDescending(p => p.Datetime).FirstOrDefault();
-                Mlist.Add(_tfremr);
+                Tfrem _tfrem = _context.Tfrem.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_tfrem);
 
-                Tfremberr _tfremberr = _context.Tfremberr.OrderByDescending(p => p.Datetime).FirstOrDefault();
-                Mlist.Add(_tfremberr);
+                Tfrember _tfrember = _context.Tfrember.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_tfrember);
 
                 Tfrainde _tfrainde = _context.Tfrainde.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_tfrainde);
@@ -83,14 +83,30 @@ namespace HeatAPI.Controllers
                 Componoff _componoff = _context.Componoff.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_componoff);
 
-                Alarmer _alarmer = _context.Alarmer.OrderByDescending(p => p.Datetime).FirstOrDefault();
-                Mlist.Add(_alarmer);
+                Alarmnr _alarmnr = _context.Alarmnr.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_alarmnr);
 
                 Ttilinde _ttilinde = _context.Ttilinde.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_ttilinde);
 
                 Tstopude _tstopude = _context.Tstopude.OrderByDescending(p => p.Datetime).FirstOrDefault();
                 Mlist.Add(_tstopude);
+
+                Treturfordeler _treturfordeler = _context.Treturfordeler.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_treturfordeler);
+
+                Tfremfordeler _tfremfordeler = _context.Tfremfordeler.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_tfremfordeler);
+
+                Treturradiator _treturradiator = _context.Treturradiator.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_treturradiator);
+
+                Trumfordeler _trumfordeler = _context.Trumfordeler.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_trumfordeler);
+
+                Qcircradiator _qcircradiator = _context.Qcircradiator.OrderByDescending(p => p.Datetime).FirstOrDefault();
+                Mlist.Add(_qcircradiator);
+
 
                 JsonResult Measurementsresult = new JsonResult(Mlist);
 

@@ -4,25 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
-    [Table("Tfremr")]
-    public class Tfremr : Measurement
+    [Table("alarmnr")]
+    public class Alarmnr : Measurement
     {
-        public Tfremr()
+        public Alarmnr()
         {
-            Name = "Tfremr";
-            Unit = "°C";
+            Name = "Alarmnr";
+            Unit = "stk";
             Controllable = false;
             ModBusAddress = 1;
-            ModBusSlaveidAddress = 40008;
+            ModBusSlaveidAddress = 41000;
             ModBusCount = 1;
             ModBusSize = 16;
             ModBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
-            Multiplier = 10;
-        }
-        public void Convert()
-        {
-            Value /= Multiplier;
+            Multiplier = 1;
         }
     }
 }
-

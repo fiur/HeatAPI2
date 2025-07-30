@@ -4,20 +4,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI.Models
 {
-    [Table("alarmer")]
-    public class Alarmer : Measurement
+    [Table("Qcircradiator")]
+    public class Qcircradiator : Measurement
     {
-        public Alarmer()
+        public Qcircradiator()
         {
-            Name = "Alarmer";
-            Unit = "stk";
+            Name = "Qcircradiator";
+            Unit = "l/min";
             Controllable = false;
             ModBusAddress = 1;
-            ModBusSlaveidAddress = 41000;
+          /*  ModBusSlaveidAddress = ""; */
             ModBusCount = 1;
             ModBusSize = 16;
             ModBusEndpoint = "http://modbusgw.local/api/RWSingle/Short/";
             Multiplier = 1;
         }
+        public void Convert()
+        {
+            Value /= Multiplier;
+        }
     }
 }
+

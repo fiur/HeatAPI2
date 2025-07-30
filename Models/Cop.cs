@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeatAPI2.Models
+
 {
     public class Cop
     {
@@ -27,9 +28,11 @@ namespace HeatAPI2.Models
             Pprodvv _pprodvv = _context.Pprodvv.OrderByDescending(p => p.Datetime).FirstOrDefault();
             Ptotude _ptotude = _context.Ptotude.OrderByDescending(p => p.Datetime).FirstOrDefault();
 
-            Value = (_pprodvarme.Value + _pprodvv.Value - 15897) / (_ptotude.Value - 2002);
-            /* Value = (_pprodvarme.Value + _pprodvv.Value - 8385) / (_ptotude.Value - 5); */
+             Value = (_pprodvarme.Value - 76438 + _pprodvv.Value - 8108)/(_ptotude.Value - 14514);
+           
+            /* ovennævnte gælder perioden fra 01.10.2024 til og med seneste måling */
         }
+      
 
     }
 }
