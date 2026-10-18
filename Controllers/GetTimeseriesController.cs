@@ -19,6 +19,7 @@ namespace HeatAPI.Controllers
     [ApiController]
     [Route("api/Get/ts")]
     [Produces("application/json")]
+    
     public class GetTimeseriesController : Controller
     {
         
@@ -36,9 +37,12 @@ namespace HeatAPI.Controllers
             using (_context)
             {
                 string measurementType = model.MeasurementType.ToString();
-                string groupSize = model.GroupSize.ToString();
-                string startDate = model.StartTime.Date.ToString("yyyy-MM-dd");
-                string endDate = model.EndTime.Date.ToString("yyyy-MM-dd");
+                // string groupSize = model.GroupSize.ToString();
+                int groupSize = model.GroupSize > 0 ? model.GroupSize : 60;
+                // string startDate = model.StartTime.Date.ToString("yyyy-MM-dd");
+                string startDate = model.StartTime.Date.ToString("yyyyMMdd");
+                //string endDate = model.EndTime.Date.ToString("yyyy-MM-dd");
+                string endDate = model.EndTime.Date.AddDays(1).ToString("yyyyMMdd");
                 string reqFunction = model.ReqFunction.ToString();
                 string sqlFunc = "";
 
@@ -64,14 +68,22 @@ namespace HeatAPI.Controllers
                 return Item;
             }
         }
-    }
+    } 
 
     public class GetTimeseries
     {
-        public String MeasurementType { set; get; }
+        /*public String MeasurementType { set; get; }
         public DateTime StartTime { set; get; } 
         public DateTime EndTime { set; get; } 
         public String GroupSize { set; get; } 
+        public String ReqFunction { set; get; }*/
+
+
+        public String MeasurementType { set; get; }
+        public DateTime StartTime { set; get; }
+        public DateTime EndTime { set; get; }
+        public int GroupSize { set; get; } = 60;   // minutter, standard 60
         public String ReqFunction { set; get; }
+
     }
 }

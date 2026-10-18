@@ -37,7 +37,8 @@ namespace HeatAPI2.Controllers
 
             JsonResult Measurementsresult = new JsonResult(cop);
 
-            return Measurementsresult;
+            //return Measurementsresult;//
+            return new JsonResult(new { name = "COP", value = Math.Round(_cop.Value, 2) });
 
         }
     }
